@@ -9,6 +9,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: resolve => require(['../pages/login/index'], resolve)
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: resolve => require(['../pages/register/index'], resolve)
     }
   ]
 })
