@@ -1,20 +1,25 @@
 <template>
   <div class="nav-model">
     <div class="content">
-      <div class="logo-box"></div>
-      <ul class="nav-box">
+      <img class="menu phone" src="../assets/images/menu.png">
+      <div class="logo-box pc"></div>
+      <ul class="nav-box pc">
         <li v-for="(item, index) in menuList" :key="index">{{ item.name }}</li>
       </ul>
-      <div class="btn-box">
+      <div class="right phone">
+        <img src="../assets/phone_images/book.png" >
+        <img src="../assets/phone_images/car.png" >
+      </div>
+      <div class="btn-box pc">
         <button class="btn">自助页面</button>
       </div>
-      <div class="book img">
+      <div class="book img pc">
         <img src="../assets/images/book.png" >
       </div>
-      <div class="car img">
+      <div class="car img pc">
         <img src="../assets/images/car.png" >
       </div>
-      <div class="touxiang img">
+      <div class="touxiang img pc">
         <img src="../assets/images/timg.jpg" >
       </div>
     </div>
@@ -49,8 +54,59 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 /* 小屏幕（平板，大于等于 768px） */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .nav-model {
+    background: #383838;
+    padding-bottom: 16%;
+    .content {
+      width: 92%;
+      padding: 0 4%;
+    }
+    .pc {
+      display: none;
+    }
+    .right {
+      display: inline-block;
+      img {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+      }
+    }
+    .menu {
+      display: inline-block;
+    }
+    .logo-box {
+      background: url('../assets/phone_images/logo1.png') no-repeat;
+      width: 26%;
+      margin-right: 17%;
+    }
+  }
+}
 
+@media (min-width: 768px) {
+  .nav-model {
+    background: #fff;
+    padding-bottom: 6%;
+    .content {
+      width: 80%;
+      padding: 0 8% 0 12%;
+    }
+    .logo-box {
+      background: url('../assets/images/logo.png') no-repeat;
+      width: 16%;
+      margin-right: 2%;
+    }
+    .nav-box {
+      display: inline-flex;
+    }
+    .phone {
+      display: none;
+    }
+    .pc {
+      display: inline-block;
+    }
+  }
 }
 
 /* 中等屏幕（桌面显示器，大于等于 992px） */
@@ -77,31 +133,28 @@ export default {
 }
   .nav-model {
     width: 100%;
-    padding-bottom: 6%;
     box-shadow:3.5px 3.5px 2.5px rgba(35,24,21,0.15);
-    background: #fff;
+    // background: #fff;
     position: relative;
     .content {
       position: absolute;
       top: 0;
       left: 0;
-      width: 80%;
       height: 100%;
-      padding: 0 8% 0 12%;
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
     .logo-box {
-      width: 16%;
+      // width: 16%;
       padding-bottom: 5%;
-      background: url('../assets/images/logo.png') no-repeat;
-      margin-right: 2%;
       background-size: 100% 100%;
       display: inline-block;
       float: left;
     }
     .nav-box {
-      display: inline-block;
+      justify-content: center;
+      width: 70%;
       li {
         margin-right: 3%;
         font-size: 8px;
@@ -109,9 +162,15 @@ export default {
         color: #6A6A6A;
       }
     }
+    .menu {
+      float: left;
+      width: 34px;
+      height: 21px;
+      margin-right: 19%;
+    }
     .btn-box {
       width: 12%;
-      padding-bottom: 4%;
+      padding-bottom: 3%;
       position: relative;
       margin-right: 3%;
       .btn {
@@ -130,7 +189,7 @@ export default {
       }
     }
     .img {
-      display: inline-block;
+      
       margin-right: 1%;
       position: relative;
       img {
@@ -144,14 +203,14 @@ export default {
     }
     .book {
       width: 2.5%;
-      padding-bottom: 2.5%;
+      padding-bottom: 2%;
     }
     .car {
-      width: 2.5%;
+      width: 3%;
       padding-bottom: 2.5%;
     }
     .touxiang {
-      width: 5%;
+      width: 6%;
       padding-bottom: 5%;
       img {
         border-radius: 50px;

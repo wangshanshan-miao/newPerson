@@ -13,8 +13,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  .box {
+    padding-top: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .box {
+    padding-top: 10px;
+  }
+    
+}
 .box {
     background: #383838;
-    padding-top: 10px;
+    // padding-top: 10px;
 }
 </style>
