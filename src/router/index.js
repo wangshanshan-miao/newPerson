@@ -7,7 +7,7 @@ export default new Router({
   routes: [{
       path: '/login',
       name: 'login',
-      component: resolve => require(['../pages/login/index'], resolve)
+      component: resolve => require(['../pages/login/header'], resolve)
     },
     {
       path: '/register',
@@ -25,4 +25,6 @@ export default new Router({
       component: resolve => require(['../pages/setting/updatePassword'], resolve)
     }
   ]
+
+
 })
