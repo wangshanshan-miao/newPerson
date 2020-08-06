@@ -15,14 +15,14 @@ export default new Router({
       component: resolve => require(['../pages/register/index'], resolve)
     },
     {
-      path: '/setting',
-      name: 'setting',
-      component: resolve => require(['../pages/setting/porsonal'], resolve),
-      children: [{
-        path: '/setting/porsonal', //第二层路由
-        name: 'porsonal',
-        component: resolve => require(['../pages/setting/porsonal'], resolve),
-      },],
+      path: '/porsonal',
+      name: 'porsonal',
+      component: resolve => require(['../pages/setting/porsonal'], resolve)
+    },
+    {
+      path: '/updatePassword',
+      name: 'updatePassword',
+      component: resolve => require(['../pages/setting/updatePassword'], resolve)
     }
   ]
 })

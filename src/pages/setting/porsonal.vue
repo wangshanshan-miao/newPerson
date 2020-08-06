@@ -82,15 +82,13 @@
 
 <style lang="scss" scoped>
   .box {
-    background: #383838;
-    // padding-top: 10px;
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
   }
 
   .main {
-    width: 100vw;
-    height: 100vh;
     background: #fff;
-
     .content {
       background: rgba(255, 255, 255, 1);
       border: 2px solid rgba(224, 224, 224, 1);
@@ -160,10 +158,11 @@
 
   @media (min-width: 768px) {
     .box {
-      padding-top: 10px;
+      border-top: 10px solid #383838;
     }
 
     .main {
+      padding-top: 38px;
       .content {
         width: 1368px;
         height: 829px;
@@ -249,7 +248,7 @@
                 }
               }
               div{
-                width: 49%;
+                width: 48%;
               }
             }
           }
@@ -257,10 +256,16 @@
       }
     }
   }
-
   @media (max-width: 768px) {
-    .box {
-      padding-top: 0px;
+    .box{
+      padding-top: 0;
+    }
+    .main{
+      .content{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
     }
   }
 </style>
