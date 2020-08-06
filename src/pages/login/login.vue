@@ -1,3 +1,4 @@
+<template>
   <div class="login-box">
     <div class="email row">
       <img src="../../assets/images/email.png">
@@ -189,5 +190,7 @@
           color: #747474;
           opacity: 0.49;
         }
+      }
     }
+  }
 </style>
