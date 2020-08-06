@@ -48,10 +48,14 @@ export default {
       opacity:0.89;
       .page-con {
           width: 92%;
+          padding-bottom: 140px;
+          border-radius: 44px;
+          border:4px solid rgba(232,232,232,1);
+          box-shadow:0px 14px 12px rgba(0,0,0,0.16);
           .title {
-              padding: 105px 0 63px;
+              padding: 102px 0 62px;
               .title-name {
-                font-size: 61px;
+                font-size: 60px;
               }
               .middle {
                    font-size: 38px;
@@ -71,6 +75,9 @@ export default {
       .page-con {
           width: 65%;
           padding-bottom: 24px;
+          border-radius: 9px;
+          border: 1px solid rgba(195,195,195,1);
+          box-shadow: 3px 3px 2px rgba(0,0,0,0.16);
           .title {
               padding: 25px 0 21px;
               .title-name {
@@ -97,13 +104,9 @@ export default {
        position: relative;
        .page-con {
            background:rgba(255,255,255,1);
-           border: 1px solid rgba(195,195,195,1);
-           box-shadow: 3px 3px 2px rgba(0,0,0,0.16);
-           border-radius: 9px;
            display: inline-block;
            margin: 0 auto;
            text-align: center;
-           padding-bottom: 25px;
            .title {
                width: 100%;
                text-align: center;

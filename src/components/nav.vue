@@ -64,6 +64,7 @@ export default {
     .content {
       width: 92%;
       padding: 0 4%;
+      height: 110px;
     }
     .pc {
       display: none;
@@ -96,6 +97,7 @@ export default {
     .content {
       width: 80%;
       padding: 0 8% 0 12%;
+      height: 50px;
     }
     .logo-box {
       background: url('../assets/images/logo.png') no-repeat;
@@ -145,7 +147,6 @@ export default {
     background: #383838;
   }
   .content {
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;

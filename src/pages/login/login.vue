@@ -47,40 +47,41 @@ export default {
 
 @media (max-width: 768px) {
     .login-box {
-        width: 100%;
+        width: 89%;
         .checkbox {
             text-align: left;
-            margin-top: 8px;
+            margin-top: 34px;
             display: flex;
             align-items: center;
             color: #99999A;
-            height: 18px;
+            height: 60px;
             label {
-            font-size: 14px;
-            line-height: 29px;
+                font-size: 28px;
+                line-height: 60px;
+                padding-left: 60px;
             }
-        }
-        .button {
-            display: inline-block;
-            width: 89%;
-            height: 52px;
-            line-height: 52px;
-            border-radius: 16px;
-            background: #5A7786;
-            border: none;
-            margin-top: 8px;
-            color: #fff;
-            font-size: 12px;
-            img {
-                width: 7%;
-                top: 15%;
+            label::before {
+                width: 59px;
+                height: 59px;
+                line-height: 59px;
+                border-radius: 14px;
             }
         }
         .forget {
-            font-size: 8px;
+            font-size: 28px;
             color: #878787;
-            line-height: 6px;
-            margin: 10px 0 43px;
+            line-height: 58px;
+            margin: 34px 0 38px;
+        }
+        .or{
+            fieldset{
+                height: 56px;
+                border-top: 4px solid;
+                legend{
+                    padding: 0 40px;
+                    font-size: 40px;
+                }
+            }
         }
     }
 }
@@ -91,29 +92,29 @@ export default {
             margin-top: 8px;
             height: 18px;
             label {
-            font-size: 8px;
-            line-height: 17px;
+                font-size: 8px;
+                line-height: 17px;
             }
-        }
-        .button {
-            width: 100%;
-            height: 27px;
-            line-height: 27px;
-            border-radius: 3px;
-            margin-top: 8px;
-            font-size: 10px;
-            img {
-                width: 7%;
-                top: 15%;
+            label::before {
+                width: 17px;
+                height: 17px;
+                line-height: 17px;
             }
-        }
-        .login-btn {
-            font-size: 12px;
         }
         .forget {
             font-size: 10px;
             line-height: 6px;
             margin: 10px 0;
+        }
+        .or{
+            fieldset{
+                height:20px;
+                border-top: 1px solid;
+                legend{
+                    padding: 0 10px;
+                    font-size: 12px;
+                }
+            }
         }
     }
 }
@@ -127,24 +128,6 @@ export default {
         display: flex;
         align-items: center;
         color: #99999A;
-        label {
-        
-        }
-    }
-    .button {
-        display: inline-block;
-        border: none;
-        color: #fff;
-        position: relative;
-        img {
-            display: inline-block;
-            float: left;
-            position: absolute;
-            left: 4%;
-        }
-    }
-    .login-btn {
-        background: #5A7786;
     }
     .facebook {
         background: #3966B8;
@@ -161,15 +144,11 @@ export default {
             border-right: none;
             border-bottom: none;
             color: #DBDBE5;
-            border-color: #defffc;
-            height:20px;
-            border-top: 1px solid;
+            border-color: #DBDBE5;
             legend{
-            text-align: center;
-            padding: 0 10px;
-            font-size: 12px;
-            color: #747474;
-            opacity:0.49;
+                text-align: center;
+                color: #747474;
+                opacity:0.49;
             }
         }
     }
