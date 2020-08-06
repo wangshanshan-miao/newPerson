@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/login',
       name: 'login',
-      component: resolve => require(['../pages/login/index'], resolve)
+      component: resolve => require(['../pages/login/header'], resolve)
     }
   ]
 })

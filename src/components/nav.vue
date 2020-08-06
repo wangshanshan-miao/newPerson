@@ -1,5 +1,6 @@
 <template>
   <div class="nav-model">
+    <div class="top"></div>
     <div class="content">
       <img class="menu phone" src="../assets/images/menu.png">
       <div class="logo-box pc"></div>
@@ -57,7 +58,9 @@ export default {
 @media (max-width: 768px) {
   .nav-model {
     background: #383838;
-    padding-bottom: 16%;
+    .top {
+      height: 0;
+    }
     .content {
       width: 92%;
       padding: 0 4%;
@@ -84,10 +87,12 @@ export default {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .nav-model {
     background: #fff;
-    padding-bottom: 6%;
+    .top {
+      height: 10px;
+    }
     .content {
       width: 80%;
       padding: 0 8% 0 12%;
@@ -97,14 +102,14 @@ export default {
       width: 16%;
       margin-right: 2%;
     }
+    .pc {
+      display: inline-block;
+    }
     .nav-box {
-      display: inline-flex;
+      display: inline-flex ;
     }
     .phone {
       display: none;
-    }
-    .pc {
-      display: inline-block;
     }
   }
 }
@@ -131,90 +136,90 @@ export default {
     width: 45%;
   }
 }
-  .nav-model {
-    width: 100%;
-    box-shadow:3.5px 3.5px 2.5px rgba(35,24,21,0.15);
-    // background: #fff;
+.nav-model {
+  width: 100%;
+  box-shadow:3.5px 3.5px 2.5px rgba(35,24,21,0.15);
+  // background: #fff;
+  position: relative;
+  .top {
+    background: #383838;
+  }
+  .content {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-box {
+    // width: 16%;
+    padding-bottom: 5%;
+    background-size: 100% 100%;
+    display: inline-block;
+    float: left;
+  }
+  .nav-box {
+    justify-content: center;
+    width: 70%;
+    li {
+      margin-right: 3%;
+      font-size: 8.5px;
+      float: left;
+      color: #6A6A6A;
+    }
+  }
+  .menu {
+    float: left;
+    width: 34px;
+    height: 21px;
+    margin-right: 19%;
+  }
+  .btn-box {
+    width: 12%;
+    padding-bottom: 3%;
     position: relative;
-    .content {
+    margin-right: 3%;
+    .btn {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:rgba(227,89,104,1);
+      opacity:1;
+      border-radius: 26px;
+      font-size: 6px;
+      color: #fff;
+      border: none;
+    }
+  }
+  .img {
+    
+    margin-right: 1%;
+    position: relative;
+    img {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .logo-box {
-      // width: 16%;
-      padding-bottom: 5%;
-      background-size: 100% 100%;
       display: inline-block;
-      float: left;
-    }
-    .nav-box {
-      justify-content: center;
-      width: 70%;
-      li {
-        margin-right: 3%;
-        font-size: 8px;
-        float: left;
-        color: #6A6A6A;
-      }
-    }
-    .menu {
-      float: left;
-      width: 34px;
-      height: 21px;
-      margin-right: 19%;
-    }
-    .btn-box {
-      width: 12%;
-      padding-bottom: 3%;
-      position: relative;
-      margin-right: 3%;
-      .btn {
-        display: inline-block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background:rgba(227,89,104,1);
-        opacity:1;
-        border-radius: 26px;
-        font-size: 6px;
-        color: #fff;
-        border: none;
-      }
-    }
-    .img {
-      
-      margin-right: 1%;
-      position: relative;
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-      }
-    }
-    .book {
-      width: 2.5%;
-      padding-bottom: 2%;
-    }
-    .car {
-      width: 3%;
-      padding-bottom: 2.5%;
-    }
-    .touxiang {
-      width: 6%;
-      padding-bottom: 5%;
-      img {
-        border-radius: 50px;
-      }
     }
   }
+  .book {
+    width: 2.5%;
+    padding-bottom: 2%;
+  }
+  .car {
+    width: 3%;
+    padding-bottom: 2.5%;
+  }
+  .touxiang {
+    width: 6%;
+    padding-bottom: 5%;
+    img {
+      border-radius: 50px;
+    }
+  }
+}
 </style>
