@@ -187,6 +187,7 @@
         legend {
           text-align: center;
           padding: 0 10px;
+          font-size: 12px;
           color: #747474;
           opacity: 0.49;
         }
