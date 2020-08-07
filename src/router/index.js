@@ -15,9 +15,9 @@ export default new Router({
       component: resolve => require(['../pages/register/index'], resolve)
     },
     {
-      path: '/porsonal',
-      name: 'porsonal',
-      component: resolve => require(['../pages/setting/porsonal'], resolve)
+      path: '/personal',
+      name: 'personal',
+      component: resolve => require(['../pages/setting/personal'], resolve)
     },
     {
       path: '/updatePassword',
