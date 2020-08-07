@@ -21,15 +21,18 @@
         <img src="../assets/images/car.png" >
       </div>
       <div class="touxiang img pc">
-        <img src="../assets/images/timg.jpg" >
+        <router-link to="/personal">
+          <img src="../assets/images/timg.jpg" >
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'header',
+  name: 'navs',
   data () {
     return {
       menuList: [{
