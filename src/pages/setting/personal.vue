@@ -33,6 +33,13 @@
             </div>
           </div>
           <div class="content3">
+            <div class="content3-person">
+              <img src="" alt="">
+              <div>
+                <p>User:</p>
+                <p>ID70624700</p>
+              </div>
+            </div>
             <div class="content3-item">
               <p>個人資料</p>
 
@@ -109,58 +116,20 @@
           font-size:20px;
           font-family:PingFang TC;
           font-weight:500;
-          line-height:23px;
           color:rgba(155, 155, 155, 1);
-          letter-spacing:10px;
-          margin-top: 50px;
           text-align: center;
 
           &:nth-child(1) {
-            margin-top: 64px;
             color: rgba(29, 82, 116, 1);
           }
         }
       }
 
-      .content2 {
-        text-align: center;
 
-        .content2-item {
-          text-align: center;
-          font-size: 30px;
-          font-family: Helvetica;
-          font-weight: 400;
-          color: rgba(34, 34, 34, 1);
-
-          .content2-btn-box {
-            width: 212px;
-            height: 48px;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 48px;
-            background: rgba(28, 29, 29, 1);
-            opacity: 1;
-            border-radius: 14px;
-            font-size: 22px;
-            font-family: PingFang TC;
-            font-weight: 500;
-            line-height: 26px;
-            color: rgba(255, 255, 255, 1);
-
-            img {
-              width: 22px;
-              height: 22px;
-              margin-right: 16px;
-            }
-          }
-
-
-        }
-      }
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 770px) {
     .box {
       border-top: 10px solid #383838;
     }
@@ -169,12 +138,12 @@
       padding-top: 38px;
 
       .content {
-        width: 1368px;
-        height: 829px;
+        width: 547px;
+        height: 332px;
         position: relative;
 
         .content1 {
-          width: 278px;
+          width: 110px;
           height: 100%;
           background: rgba(255, 255, 255, 1);
           border: 1px solid rgba(216, 216, 216, 1);
@@ -186,30 +155,49 @@
           top: -2px;
           z-index: 3;
           background: #fff;
+          .content1-item{
+            font-size:8px;
+            font-family:PingFang TC;
+            font-weight:500;
+            margin-top: 20px;
+            img {
+              width: 12px;
+              height: 12px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
         }
 
         .content2 {
-          width: 543px;
-          height: 834px;
+          text-align: center;
+          width: 216px;
+          height: 334px;
           background: rgba(255, 255, 255, 1);
           border: 1px solid rgba(216, 216, 216, 1);
           box-shadow: 7px 3px 14px rgba(0, 0, 0, 0.16);
           opacity: 1;
           border-radius: 21px;
           position: absolute;
-          left: 140px;
+          left: 56px;
           top: -2px;
           z-index: 2;
-          padding-left: 138px;
+          padding-left: 54px;
           box-sizing: border-box;
 
           .content2-item {
+            text-align: center;
+            font-size: 12px;
+            font-family: Helvetica;
+            font-weight: 400;
+            color: rgba(34, 34, 34, 1);
+
             &:first-child {
-              margin-top: 196px;
+              margin-top: 78px;
 
               img {
-                width: 267px;
-                height: 267px;
+                width: 107px;
+                height: 107px;
                 background: rgba(0, 0, 0, 1);
                 border-radius: 50%;
                 display: block;
@@ -218,7 +206,27 @@
             }
 
             &:nth-child(2) {
-              margin: 24px 0;
+              margin: 10px 0;
+            }
+
+            .content2-btn-box {
+              width: 85px;
+              height: 19px;
+              margin: 0 auto;
+              text-align: center;
+              background: rgba(28, 29, 29, 1);
+              opacity: 1;
+              border-radius: 14px;
+              font-size:9px;
+              font-family:PingFang TC;
+              font-weight:500;
+              color: rgba(255, 255, 255, 1);
+
+              img {
+                width: 9px;
+                height: 9px;
+                margin-right: 4px;
+              }
             }
           }
 
@@ -226,38 +234,39 @@
 
         .content3 {
           float: right;
-          padding-right: 84px;
-
+          padding-right: 34px;
+          .content3-person{
+            display: none;
+          }
           .content3-item {
-            width: 502px;
-            margin-top: 198px;
+            width: 200px;
+            margin-top: 58px;
 
             p {
-              font-size: 48px;
-              font-family: LiGothicMed;
-              line-height: 58px;
+              height:22px;
+              font-size:19px;
+              font-family:LiGothicMed;
               color: rgba(58, 57, 58, 1);
               opacity: 1;
-              margin-bottom: 44px;
+              margin-bottom: 18px;
             }
 
             .input-list {
               width: 100%;
-              margin-top: 17px;
+              margin-top: 6px;
 
               p {
                 margin-bottom: 0;
-                font-size: 20px;
-                font-family: PingFang TC;
-                font-weight: 400;
-                line-height: 28px;
+                font-size:8px;
+                font-family:PingFang TC;
+                font-weight:400;
                 color: rgba(49, 49, 49, 1);
                 opacity: 0.62;
 
                 input {
                   width: 100%;
                   border: none;
-                  border-bottom: 2px solid rgba(219, 219, 229, 1);
+                  border-bottom: 1px solid rgba(137, 137, 137, 1);
                 }
               }
 
@@ -325,7 +334,6 @@
             &:nth-child(2) {
               width: 66%;
               padding-left: 33%;
-              color: rgba(29, 82, 116, 1);
               box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
               opacity: 1;
               border-radius: 0 0 44px 0;
@@ -343,10 +351,13 @@
 
         }
 
+        .content2 {
+          display: none;
+        }
+
         .content3 {
           margin: 30px;
           position: relative;
-
           .content3-person {
             position: absolute;
             top: 0;
@@ -375,7 +386,6 @@
           }
 
           .content3-item {
-            width: 100%;
             padding: 252px 50px 50px;
             background: rgba(255, 255, 255, 1);
             border: 4px solid rgba(232, 232, 232, 1);
