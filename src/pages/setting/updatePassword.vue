@@ -152,29 +152,29 @@
                 border: 1px solid rgba(137, 137, 137, 1);
                 opacity: 0.25;
                 border-radius: 5px;
-                height: 44px;
+                height: 18px;
                 margin-top: 10px;
-                padding-left: 14px;
+                padding-left: 6px;
 
                 img {
-                  width: 18px;
-                  height: 22px;
-                  margin-right: 10px;
+                  width: 7px;
+                  height: 9px;
+                  margin-right: 6px;
                 }
               }
             }
           }
 
           .tips {
-            font-size: 15px;
+            font-size: 6px;
             font-family: AdobeFanHeitiStd-Bold-B5pc-H;
-            line-height: 74px;
             color: rgba(150, 14, 32, 1);
             opacity: 0.57;
+            margin-top: 6px;
 
             img {
-              width: 20px;
-              height: 20px;
+              width: 7px;
+              height: 7px;
               display: inline-block;
               vertical-align: middle;
             }
@@ -228,11 +228,11 @@
 
 
         .content3 {
-          padding-left: 278px;
+          padding-left: 97px;
 
           .content3-item {
-            width: 502px;
-            margin-top: 198px;
+            width: 200px;
+            margin-top: 63px;
 
 
           }
