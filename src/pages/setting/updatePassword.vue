@@ -1,0 +1,349 @@
+<template>
+  <div class="box">
+    <m-nav></m-nav>
+    <div class="main flex-box flex-j-c flex-a-c">
+      <div class="content-box">
+        <div class="content">
+          <div class="content1">
+            <div class="content1-item">
+              <img src="../../assets/images/circle.png" alt="">
+              <span>個人資料</span>
+            </div>
+            <div class="content1-item">
+              <img src="../../assets/images/circle_color.png" alt="">
+              <span>更改密碼</span>
+            </div>
+            <div class="content1-item">
+                <img src="../../assets/images/circle.png" alt="">
+                <span>收貨資料</span>
+            </div>
+          </div>
+
+          <div class="content3 flex-box flex-j-c flex-a-c">
+            <div class="content3-person">
+              <img src="" alt="">
+              <div>
+                <p>User:</p>
+                <p>ID70624700</p>
+              </div>
+            </div>
+            <div class="content3-item">
+              <p>更改密碼</p>
+
+              <div class="input-list">
+                <p>原本的密碼</p>
+                <p class="flex-box flex-j-t flex-a-c">
+                  <img src="../../assets/images/update-password.png" alt="">
+                  <input type="password" placeholder="Original password">
+                </p>
+              </div>
+
+              <div class="input-list">
+                <p>新密碼</p>
+                <p class="flex-box flex-j-t flex-a-c">
+                  <img src="../../assets/images/update-password.png" alt="">
+                  <input type="password" placeholder="New Password">
+                </p>
+              </div>
+
+              <div class="input-list">
+                <p>確定新密碼</p>
+                <p class="flex-box flex-j-t flex-a-c">
+                  <img src="../../assets/images/update-password.png" alt="">
+                  <input type="password" placeholder="New Password">
+                </p>
+              </div>
+
+              <div class="tips">
+                <img src="../../assets/images/warn.png" alt="">
+                <span>*密碼錯誤，請重新輸入</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  import mNav from '@/components/nav.vue'
+  import '../../../static/css/flex.css';
+  export default {
+    name: 'app',
+    components: {
+      mNav
+    }
+  }
+</script>
+
+<style lang="scss" scoped>
+  .box {
+    background: #fff;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .main {
+    background: #fff;
+
+    .content {
+      background: rgba(255, 255, 255, 1);
+      border: 2px solid rgba(224, 224, 224, 1);
+      box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+      opacity: 1;
+      border-radius: 22px;
+
+      .content1 {
+        .content1-item {
+          img {
+            width: 28px;
+            height: 28px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          font-size:20px;
+          font-family:PingFang TC;
+          font-weight:500;
+          line-height:23px;
+          color:rgba(155, 155, 155, 1);
+          letter-spacing:10px;
+          text-align: center;
+
+          &:nth-child(2) {
+            color: rgba(29, 82, 116, 1);
+          }
+        }
+
+
+      }
+
+      .content3 {
+        .content3-person{
+          display: none;
+        }
+        .content3-item{
+          p {
+            font-size: 48px;
+            font-family: LiGothicMed;
+            line-height: 58px;
+            color: rgba(58, 57, 58, 1);
+            opacity: 1;
+            margin-bottom: 44px;
+          }
+
+          .input-list {
+            width: 100%;
+            margin-top: 17px;
+
+            p {
+              margin-bottom: 0;
+              font-size: 20px;
+              font-family: PingFang TC;
+              font-weight: 400;
+              line-height: 28px;
+              color: rgba(49, 49, 49, 1);
+              opacity: 0.62;
+
+              input {
+                width: 100%;
+                border: none;
+              }
+
+              &:last-child {
+                border: 2px solid rgba(137, 137, 137, 1);
+                opacity: 0.25;
+                border-radius: 5px;
+                height: 44px;
+                margin-top: 10px;
+                padding-left: 14px;
+
+                img {
+                  width: 18px;
+                  height: 22px;
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+          .tips{
+            font-size:15px;
+            font-family:AdobeFanHeitiStd-Bold-B5pc-H;
+            line-height:74px;
+            color:rgba(150,14,32,1);
+            opacity:0.57;
+            img{
+              width: 20px;
+              height: 20px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  @media (min-width: 770px) {
+    .box {
+      border-top: 10px solid #383838;
+    }
+
+    .main {
+      padding-top: 38px;
+
+      .content {
+        width: 1368px;
+        height: 829px;
+        position: relative;
+
+        .content1 {
+          width: 278px;
+          height: 100%;
+          background: rgba(255, 255, 255, 1);
+          border: 1px solid rgba(216, 216, 216, 1);
+          box-shadow: 7px 3px 14px rgba(0, 0, 0, 0.16);
+          opacity: 1;
+          border-radius: 21px;
+          position: absolute;
+          left: -2px;
+          top: -2px;
+          z-index: 3;
+          background: #fff;
+        }
+
+
+
+        .content3 {
+          padding-left: 278px;
+
+          .content3-item {
+            width: 502px;
+            margin-top: 198px;
+
+
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .box {
+      padding-top: 0;
+    }
+
+    .main {
+      .content {
+        width: 100vw;
+        min-height: 100vh;
+        position: relative;
+        .content1 {
+          position: relative;
+          height: 144px;
+          width: 100%;
+          .content1-item {
+            position: absolute;
+            img {
+              width: 28px;
+              height: 28px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            font-size:20px;
+            font-family:PingFang TC;
+            font-weight:500;
+            line-height:23px;
+            color:rgba(155, 155, 155, 1);
+            letter-spacing:10px;
+            width: 100%;
+            height: 144px;
+            line-height: 144px;
+            text-align: center;
+            box-sizing: border-box;
+            &:nth-child(1) {
+              width: 33%;
+              top: 0;
+              left: 0;
+              box-shadow:0px 14px 12px rgba(0,0,0,0.16);
+              opacity:1;
+              border-radius:0 0 44px 0;
+              background: #fff;
+              z-index: 3;
+            }
+            &:nth-child(2) {
+              width: 66%;
+              padding-left: 33%;
+              color: rgba(29, 82, 116, 1);
+              box-shadow:0px 14px 12px rgba(0,0,0,0.16);
+              opacity:1;
+              border-radius:0 0 44px 0;
+              background-color: #fff;
+              z-index: 1;
+            }
+            &:nth-child(3) {
+              padding-left: 60%;
+              border:2px solid rgba(216,216,216,1);
+              box-shadow:14px 6px 28px rgba(0,0,0,0.16);
+            }
+          }
+
+
+        }
+        .content3{
+          margin: 30px;
+          position: relative;
+          .content3-person{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height:200px;
+            background:rgba(255,255,255,1);
+            border:4px solid rgba(232,232,232,1);
+            box-shadow:0px 14px 12px rgba(0,0,0,0.16);
+            opacity:1;
+            border-radius:44px;
+            img{
+              width: 130px;
+              height: 132px;
+              display: block;
+              float: left;
+              margin: 0 auto;
+            }
+            div{
+              float: left;
+              margin: 0 auto;
+            }
+          }
+          .content3-item{
+            width: 100%;
+            padding: 252px 50px 50px;
+            background:rgba(255,255,255,1);
+            border:4px solid rgba(232,232,232,1);
+            box-shadow:0px 14px 12px rgba(0,0,0,0.16);
+            opacity:1;
+            border-radius:44px;
+            font-size:32px;
+            .input-list{
+              p{
+                box-sizing: border-box;
+                padding: 10px;
+                &:last-child{
+                  height: 80px;
+                }
+                input{
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
