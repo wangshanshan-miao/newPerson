@@ -110,7 +110,7 @@
     name: 'app',
     data(){
       return{
-        hasMsg: 0
+        hasMsg: 1
       }
     },
     components: {
@@ -219,41 +219,45 @@
             margin-top: 58px;
 
             p {
-              height: 22px;
               font-size: 19px;
               font-family: LiGothicMed;
               color: rgba(58, 57, 58, 1);
               opacity: 1;
               margin-bottom: 18px;
             }
+            .hasMsg{
+              .input-list {
+                width: 100%;
+                margin-top: 6px;
 
-            .input-list {
-              width: 100%;
-              margin-top: 6px;
+                p {
+                  margin-bottom: 0;
+                  font-size: 8px;
+                  font-family: PingFang TC;
+                  font-weight: 400;
+                  color: rgba(49, 49, 49, 1);
+                  opacity: 0.62;
+                  line-height: 22px;
+                  &:last-child{
+                    height: 22px;
+                    border-bottom: 1px solid rgba(137, 137, 137, 1);
 
-              p {
-                margin-bottom: 0;
-                font-size: 8px;
-                font-family: PingFang TC;
-                font-weight: 400;
-                color: rgba(49, 49, 49, 1);
-                opacity: 0.62;
+                  }
 
-                input {
-                  width: 100%;
-                  border: none;
-                  border-bottom: 1px solid rgba(137, 137, 137, 1);
+
+                }
+
+                div {
+                  width: 48%;
                 }
               }
 
-              div {
-                width: 48%;
+              .submit-box {
+                display: none;
               }
             }
 
-            .submit-box {
-              display: none;
-            }
+
           }
         }
       }
