@@ -59,7 +59,7 @@
               <label>分區:</label>
               <span>小西灣</span>
             </p>
-            <p class="info-item flex-a-s flex-box">
+            <p class="info-item flex-box flex-a-t" style="align-items: flex-start;">
               <span class="flex-box flex-j-t flex-a-c">
                 <span class="dot"></span>
                 <label>送貨地址:</label>
@@ -159,7 +159,7 @@
 <style lang="scss" scoped>
   @import '../../assets/scss/flex.css';
   @import '../../assets/scss/login.scss';
-  
+
   @media (max-width: 768px) {
     .content3 {
       margin: 30px;
@@ -324,7 +324,7 @@
           }
         }
         .btn-box {
-          margin: 54px 0 110px; 
+          margin: 54px 0 110px;
           button {
             padding: 0 54px;
             height: 67px;
@@ -340,7 +340,7 @@
       }
     }
   }
-    
+
   @media (min-width: 769px) {
     .content3 {
       padding-left: 97px;
@@ -380,7 +380,7 @@
           .info {
             padding: 12.4px 12.4px 7px 12.4px;
             border: 2px dashed #D8D8D8;
-            border-radius:0 0 11px 11px; 
+            border-radius:0 0 11px 11px;
             .info-item {
               font-size: 8px;
               color: #747474;
