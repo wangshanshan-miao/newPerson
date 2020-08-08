@@ -6,6 +6,7 @@ import router from './router'
 // import './lib-flexible/flexible'
 import './assets/scss/reset.css'
 import './assets/scss/build.css'
+import './assets/font-awesome-4.7.0/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 
