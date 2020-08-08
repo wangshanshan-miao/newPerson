@@ -10,14 +10,9 @@ export default new Router({
       component: resolve => require(['../pages/login/header'], resolve)
     },
     {
-      path: '/register',
-      name: 'register',
-      component: resolve => require(['../pages/register/index'], resolve)
-    },
-    {
       path: '/personal',
       name: 'personal',
-      component: resolve => require(['../pages/setting/personal'], resolve)
+      component: resolve => require(['../pages/setting/index'], resolve)
     },
     {
       path: '/updatePassword',

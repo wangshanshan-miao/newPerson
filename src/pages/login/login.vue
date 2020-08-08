@@ -46,27 +46,6 @@
    @media (max-width: 768px) {
      .login-box {
         width: 89%;
-         .checkbox {
-            margin-top: 34px;
-            height: 60px;
-             label {
-                font-size: 28px;
-                line-height: 60px;
-                padding-left: 60px;
-             }
-            label::before {
-                width: 59px;
-                height: 59px;
-                line-height: 59px;
-                border-radius: 14px;
-            }
-            label::after {
-                width: 59px;
-                height: 59px;
-                line-height: 59px;
-                border-radius: 14px;
-            }
-         }
          .forget {
             font-size: 28px;
             color: #878787;
@@ -88,24 +67,6 @@
  @media (min-width: 769px) {
      .login-box {
         width: 70%;
-         .checkbox {
-             margin-top: 8px;
-             height: 18px;
-             label {
-                font-size: 8px;
-                line-height: 17px;
-             }
-            label::before {
-                width: 17px;
-                height: 17px;
-                line-height: 17px;
-            }
-            label::after {
-                width: 17px;
-                height: 17px;
-                line-height: 17px;
-            }
-         }
          .forget {
              font-size: 10px;
              line-height: 6px;
