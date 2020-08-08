@@ -109,7 +109,7 @@
 
   @media (min-width: 770px) {
     .personal-box {
-      border-top: 10px solid #383838;
+      // border-top: 10px solid #383838;
     }
 
     .main {

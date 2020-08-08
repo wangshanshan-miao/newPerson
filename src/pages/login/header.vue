@@ -85,7 +85,7 @@
 
   @media (min-width: 769px) {
     .box {
-      padding-top: 10px;
+      // padding-top: 10px;
 
       #contact {
         position: absolute;
