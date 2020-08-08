@@ -21,11 +21,14 @@
 
           <div class="content3 flex-box flex-j-c flex-a-c">
             <div class="content3-person">
-              <img src="" alt="">
-              <div>
-                <p>User:</p>
-                <p>ID70624700</p>
+              <div class="content3-person-item flex-box flex-j-t flex-a-c">
+                <img src="" alt="">
+                <div>
+                  <p>User:</p>
+                  <p>ID70624700</p>
+                </div>
               </div>
+
             </div>
             <div class="content3-item">
               <p>更改密碼</p>
@@ -68,7 +71,6 @@
 
 <script>
   import mNav from '@/components/nav.vue'
-  import '../../../static/css/flex.css';
   export default {
     name: 'app',
     components: {
@@ -78,6 +80,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../assets/scss/flex.css';
   .box {
     background: #fff;
     width: 100vw;
@@ -259,29 +262,30 @@
 
           .content1-item {
             position: absolute;
-
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img {
-              width: 28px;
-              height: 28px;
-              display: inline-block;
-              vertical-align: middle;
+              width: 30px;
+              height: 30px;
+              display: block;
+              margin-right: 10px;
             }
-
-            font-size:20px;
+          
+            font-size:28px;
             font-family:PingFang TC;
             font-weight:500;
-            line-height:23px;
             color:rgba(155, 155, 155, 1);
-            letter-spacing:10px;
+            letter-spacing:6px;
             width: 100%;
             height: 144px;
-            line-height: 144px;
             text-align: center;
-            box-sizing: border-box;
+          
             margin-top: 0;
-
+          
             &:nth-child(1) {
-              width: 33%;
+              width: 283px;
               top: 0;
               left: 0;
               box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
@@ -291,19 +295,19 @@
               z-index: 3;
               margin-top: 0;
             }
-
+          
             &:nth-child(2) {
-              width: 66%;
-              padding-left: 33%;
+              width: 503px;
+              padding-left: 283px;
               box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
               opacity: 1;
               border-radius: 0 0 44px 0;
               background-color: #fff;
               z-index: 1;
             }
-
+          
             &:nth-child(3) {
-              padding-left: 60%;
+              padding-left: 503px;
               border: 2px solid rgba(216, 216, 216, 1);
               box-shadow: 14px 6px 28px rgba(0, 0, 0, 0.16);
             }
@@ -329,17 +333,19 @@
             opacity: 1;
             border-radius: 44px;
 
-            img {
-              width: 130px;
-              height: 132px;
-              display: block;
-              float: left;
-              margin: 0 auto;
-            }
+            .content3-person-item {
+              margin-top: 32px;
+              margin-left: 54px;
 
-            div {
-              float: left;
-              margin: 0 auto;
+              img {
+                width: 130px;
+                height: 132px;
+                display: block;
+                background: rgba(0, 0, 0, 1);
+                border-radius: 50%;
+                margin-right: 39px;
+              }
+
             }
           }
 

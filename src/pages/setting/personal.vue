@@ -34,11 +34,14 @@
           </div>
           <div class="content3">
             <div class="content3-person">
-              <img src="" alt="">
-              <div>
-                <p>User:</p>
-                <p>ID70624700</p>
+              <div class="content3-person-item flex-box flex-j-t flex-a-c">
+                <img src="" alt="">
+                <div>
+                  <p>User:</p>
+                  <p>ID70624700</p>
+                </div>
               </div>
+
             </div>
             <div class="content3-item">
               <p>個人資料</p>
@@ -78,7 +81,6 @@
 
 <script>
   import mNav from '@/components/nav.vue'
-  import '../../../static/css/flex.css';
   export default {
     name: 'app',
     components: {
@@ -88,6 +90,8 @@
 </script>
 
 <style lang="scss" scoped>
+  @import '../../assets/scss/flex.css';
+
   .box {
     background: #fff;
     width: 100vw;
@@ -155,11 +159,13 @@
           top: -2px;
           z-index: 3;
           background: #fff;
-          .content1-item{
-            font-size:8px;
-            font-family:PingFang TC;
-            font-weight:500;
+
+          .content1-item {
+            font-size: 8px;
+            font-family: PingFang TC;
+            font-weight: 500;
             margin-top: 20px;
+
             img {
               width: 12px;
               height: 12px;
@@ -217,9 +223,9 @@
               background: rgba(28, 29, 29, 1);
               opacity: 1;
               border-radius: 14px;
-              font-size:9px;
-              font-family:PingFang TC;
-              font-weight:500;
+              font-size: 9px;
+              font-family: PingFang TC;
+              font-weight: 500;
               color: rgba(255, 255, 255, 1);
 
               img {
@@ -235,17 +241,19 @@
         .content3 {
           float: right;
           padding-right: 34px;
-          .content3-person{
+
+          .content3-person {
             display: none;
           }
+
           .content3-item {
             width: 200px;
             margin-top: 58px;
 
             p {
-              height:22px;
-              font-size:19px;
-              font-family:LiGothicMed;
+              height: 22px;
+              font-size: 19px;
+              font-family: LiGothicMed;
               color: rgba(58, 57, 58, 1);
               opacity: 1;
               margin-bottom: 18px;
@@ -257,9 +265,9 @@
 
               p {
                 margin-bottom: 0;
-                font-size:8px;
-                font-family:PingFang TC;
-                font-weight:400;
+                font-size: 8px;
+                font-family: PingFang TC;
+                font-weight: 400;
                 color: rgba(49, 49, 49, 1);
                 opacity: 0.62;
 
@@ -298,29 +306,31 @@
 
           .content1-item {
             position: absolute;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-              width: 28px;
-              height: 28px;
-              display: inline-block;
-              vertical-align: middle;
+              width: 30px;
+              height: 30px;
+              display: block;
+              margin-right: 10px;
             }
 
-            font-size:20px;
+            font-size:28px;
             font-family:PingFang TC;
             font-weight:500;
-            line-height:23px;
             color:rgba(155, 155, 155, 1);
-            letter-spacing:10px;
+            letter-spacing:6px;
             width: 100%;
             height: 144px;
-            line-height: 144px;
             text-align: center;
-            box-sizing: border-box;
+
             margin-top: 0;
 
             &:nth-child(1) {
-              width: 33%;
+              width: 283px;
               top: 0;
               left: 0;
               box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
@@ -332,8 +342,8 @@
             }
 
             &:nth-child(2) {
-              width: 66%;
-              padding-left: 33%;
+              width: 503px;
+              padding-left: 283px;
               box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
               opacity: 1;
               border-radius: 0 0 44px 0;
@@ -342,7 +352,7 @@
             }
 
             &:nth-child(3) {
-              padding-left: 60%;
+              padding-left: 503px;
               border: 2px solid rgba(216, 216, 216, 1);
               box-shadow: 14px 6px 28px rgba(0, 0, 0, 0.16);
             }
@@ -358,11 +368,13 @@
         .content3 {
           margin: 30px;
           position: relative;
+
           .content3-person {
             position: absolute;
             top: 0;
             left: 0;
             display: block;
+            box-sizing: border-box;
             width: 100%;
             height: 200px;
             background: rgba(255, 255, 255, 1);
@@ -371,22 +383,26 @@
             opacity: 1;
             border-radius: 44px;
 
-            img {
-              width: 130px;
-              height: 132px;
-              display: block;
-              float: left;
-              margin: 0 auto;
-            }
+            .content3-person-item {
+              margin-top: 32px;
+              margin-left: 54px;
 
-            div {
-              float: left;
-              margin: 0 auto;
+              img {
+                width: 130px;
+                height: 132px;
+                display: block;
+                background: rgba(0, 0, 0, 1);
+                border-radius: 50%;
+                margin-right: 39px;
+              }
+
             }
           }
 
+
+
           .content3-item {
-            padding: 252px 50px 50px;
+            padding: 252px 53px 50px 43px;
             background: rgba(255, 255, 255, 1);
             border: 4px solid rgba(232, 232, 232, 1);
             box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
@@ -394,21 +410,48 @@
             border-radius: 44px;
             font-size: 32px;
 
+            p {
+              font-size: 60px;
+              font-family: LiGothicMed;
+              color: #3A393A;
+              margin-bottom: 53px;
+            }
+
             .input-list {
+
               p {
-                box-sizing: border-box;
-                padding: 10px;
+                font-size: 32px;
+                font-family: PingFang TC;
+                font-weight: 400;
+                color: rgba(87, 87, 87, 1);
+                opacity: 0.62;
+                margin-bottom: 20px;
 
                 &:last-child {
-                  height: 80px;
+                  height: 87px;
+
+                  input {
+                    width: 100%;
+                    height: 100%;
+                    border: 4px solid rgba(137, 137, 137, 1);
+                    border-radius: 10px;
+                  }
                 }
 
-                input {
-                  height: 100%;
+                &:nth-child(2) {
+                  div {
+                    width: 50%;
+
+                    &:first-child {
+                      width: 46%;
+                    }
+                  }
                 }
+
               }
             }
           }
+
         }
       }
     }
