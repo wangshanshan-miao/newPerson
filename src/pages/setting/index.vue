@@ -123,7 +123,7 @@
         box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
         opacity: 1;
         border-radius: 22px;
-
+        margin-bottom: 20px;
         .content1 {
           width: 110px;
           height: 100%;

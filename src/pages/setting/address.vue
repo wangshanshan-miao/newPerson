@@ -13,7 +13,7 @@
       </div>
       <div class="content3-item" :style="{padding: isOld ?  '10px 0 70px' : '10px 0 30px'}">
         <div class="oldAddress" v-show="isOld">
-          <div class="title">
+          <div class="title flex-box flex-j-s flex-a-c">
             <div class="left">
               <img src="../../assets/images/address.png" />
               <span>默認收貨地址</span>
@@ -342,6 +342,7 @@
   }
 
   @media (min-width: 769px) {
+
     .content3 {
       padding-left: 97px;
       .content3-person{
