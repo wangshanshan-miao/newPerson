@@ -95,8 +95,18 @@
           </div>
           <div class="new-box">
             <div class="address-item">
-              <p>聯絡電郵</p>
-              <input type="text" placeholder="輸入email">
+              <div>
+                <p>區域</p>
+                <select></select>
+              </div>
+              <div>
+                <p>地區</p>
+                <select></select>
+              </div>
+              <div>
+                <p>分區</p>
+                <select></select>
+              </div>
             </div>
             <div class="address-item">
               <p>聯絡電話</p>
@@ -286,7 +296,7 @@
                 }
 
               }
-              input, textarea {
+              input, textarea, select {
                 width: 98%;
                 height: 87px;
                 border: 4px solid rgba(137, 137, 137, 0.25);
@@ -404,7 +414,7 @@
                 font-size: 8px;
                 margin-bottom: 2px;
               }
-              input, textarea {
+              input, textarea, select {
                 width: 98%;
                 height: 17px;
                 border:1px solid rgba(137,137,137,1);
@@ -489,10 +499,14 @@
           .new-box {
             .address-item {
               display: inline-block;
+              div {
+                display: inline-block;
+                width: 32%;
+              }
               p {
                 color: #313131;
               }
-              input, textarea {
+              input, textarea, select {
                 display: inline-block;
                 opacity:0.25;
               }
