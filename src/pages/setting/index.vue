@@ -62,8 +62,8 @@
 
   .personal-box {
     background: #fff;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 96vh;
     position: relative;
     #contact{
       position: absolute;
