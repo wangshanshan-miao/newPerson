@@ -1,6 +1,7 @@
 <template>
   <div class="personal-box">
     <m-nav></m-nav>
+    <img id="contact" src="../../assets/images/contact.png" alt="">
     <div class="main flex-box flex-j-c flex-a-c">
       <div class="content-box">
         <div class="content">
@@ -62,7 +63,15 @@
   .personal-box {
     background: #fff;
     width: 100vw;
-    // height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    #contact{
+      position: absolute;
+      width: 84px;
+      height: 18px;
+      bottom: 0;
+      right: 100px;
+    }
   }
 
   .main {
@@ -154,6 +163,9 @@
   @media (max-width: 768px) {
     .personal-box {
       padding-top: 0;
+      #contact{
+        display: none;
+      }
     }
 
     .main {

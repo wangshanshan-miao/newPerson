@@ -15,6 +15,7 @@
       </div>
     </div>
     <div class="content3">
+      
       <div class="content3-person">
         <div class="content3-person-item flex-box flex-j-t flex-a-c">
           <img src="" alt="">
@@ -210,6 +211,7 @@
           float: right;
           padding-right: 34px;
 
+          
           .content3-person {
             display: none;
           }
