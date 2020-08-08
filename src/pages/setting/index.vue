@@ -27,25 +27,25 @@
   import '../../lib-flexible/flexible'
   export default {
     name: 'app',
-    data () {
-        return {
-            leftMenu: [{
-                name: '個人資料'
-            }, {
-                name: '更改密碼'
-            }, {
-                name: '收貨資料'
-            }],
-            src1: require('../../assets/images/circle_color.png'),
-            src2: require('../../assets/images/circle.png'),
-            active: 0
-        }
+    data() {
+      return {
+        leftMenu: [{
+          name: '個人資料'
+        }, {
+          name: '更改密碼'
+        }, {
+          name: '收貨資料'
+        }],
+        src1: require('../../assets/images/circle_color.png'),
+        src2: require('../../assets/images/circle.png'),
+        active: 0
+      }
     },
     methods: {
-        jumpPage (index) {
-            console.log(index)
-            this.active = index
-        }
+      jumpPage(index) {
+        console.log(index)
+        this.active = index
+      }
     },
     components: {
       mNav,
@@ -57,7 +57,8 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../../../static/css/flex.css';
+  @import '../../assets/scss/flex.css';
+
   .personal-box {
     background: #fff;
     width: 100vw;
@@ -69,10 +70,7 @@
 
     .content {
       background: rgba(255, 255, 255, 1);
-      border: 1px solid rgba(224, 224, 224, 1);
-      box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
-      opacity: 1;
-      border-radius: 22px;
+
 
       .content1 {
         .content1-item {
@@ -83,6 +81,7 @@
             vertical-align: middle;
             cursor: pointer;
           }
+
           font-size:20px;
           font-family:PingFang TC;
           font-weight:500;
@@ -111,6 +110,10 @@
         width: 547px;
         min-height: 332px;
         position: relative;
+        border: 1px solid rgba(224, 224, 224, 1);
+        box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
+        opacity: 1;
+        border-radius: 22px;
 
         .content1 {
           width: 110px;
@@ -125,11 +128,13 @@
           top: -2px;
           z-index: 3;
           background: #fff;
-          .content1-item{
-            font-size:8px;
-            font-family:PingFang TC;
-            font-weight:500;
+
+          .content1-item {
+            font-size: 8px;
+            font-family: PingFang TC;
+            font-weight: 500;
             margin-top: 20px;
+
             img {
               width: 12px;
               height: 12px;
@@ -137,6 +142,7 @@
               vertical-align: middle;
             }
           }
+
           .content1-item:nth-of-type(1) {
             margin-top: 26px;
           }
@@ -163,25 +169,27 @@
 
           .content1-item {
             position: absolute;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             img {
-              width: 28px;
-              height: 28px;
-              display: inline-block;
-              vertical-align: middle;
+              width: 30px;
+              height: 30px;
+              display: block;
+              margin-right: 10px;
             }
 
-            font-size:20px;
+            font-size:28px;
             font-family:PingFang TC;
             font-weight:500;
-            line-height:23px;
             color:rgba(155, 155, 155, 1);
-            letter-spacing:10px;
+            letter-spacing:6px;
             width: 100%;
             height: 144px;
-            line-height: 144px;
             text-align: center;
-            box-sizing: border-box;
+
             margin-top: 0;
 
             &:nth-child(1) {

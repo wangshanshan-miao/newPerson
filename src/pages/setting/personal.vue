@@ -1,112 +1,128 @@
 <template>
-  <div class="box">
-    <m-nav></m-nav>
-    <div class="main flex-box flex-j-c flex-a-c">
-      <div class="content-box">
-        <div class="content">
-          <div class="content1">
-            <div class="content1-item">
-              <img src="../../assets/images/circle_color.png" alt="">
-              <span>個人資料</span>
+  <div>
+    <div class="content2">
+      <div class="content2-item">
+        <img src="" alt="">
+      </div>
+      <div class="content2-item">
+        <div>User Name</div>
+      </div>
+      <div class="content2-item">
+        <div class="content2-btn-box flex-box flex-j-c flex-a-c">
+          <img src="../../assets/images/edit.png" alt="">
+          <span>修改資料</span>
+        </div>
+      </div>
+    </div>
+    <div class="content3">
+      <div class="content3-person">
+        <div class="content3-person-item flex-box flex-j-t flex-a-c">
+          <img src="" alt="">
+          <div>
+            <p>User:</p>
+            <p>ID70624700</p>
+          </div>
+
+          <div v-if="hasMsg == 1" class="edit-btn flex-box flex-j-c flex-a-c" @click="editMsg">
+            <img src="../../assets/images/edit.png" alt="">
+            <div>修改資料</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content3-item">
+        <p>個人資料</p>
+        <div class="noMsg" v-if="hasMsg == 0">
+          <div class="input-list">
+            <p>用戶名稱</p>
+            <p><input type="text" placeholder="Username2047"></p>
+          </div>
+
+          <div class="input-list flex-box flex-j-s flex-a-c">
+            <div>
+              <p>姓氏</p>
+              <p><input type="text" placeholder="Chung"></p>
             </div>
-            <div class="content1-item">
-              <img src="../../assets/images/circle.png" alt="">
-              <span>更改密碼</span>
-            </div>
-            <div class="content1-item">
-              <img src="../../assets/images/circle.png" alt="">
-              <span>收貨資料</span>
+            <div>
+              <p>名稱</p>
+              <p><input type="text" placeholder="Ka Wai"></p>
             </div>
           </div>
-          <div class="content2">
-            <div class="content2-item">
-              <img src="" alt="">
-            </div>
-            <div class="content2-item">
-              <div>User Name</div>
-            </div>
-            <div class="content2-item">
-              <div class="content2-btn-box flex-box flex-j-c flex-a-c">
-                <img src="../../assets/images/edit.png" alt="">
-                <span>修改資料</span>
-              </div>
+
+          <div class="input-list">
+            <p>電郵地址</p>
+            <p><input type="text" placeholder="Chungkawai2047@gmail.com"></p>
+          </div>
+
+          <div class="input-list">
+            <p>性別</p>
+            <p><select class="sex-box" id="sex">
+                <option>男</option>
+                <option>女</option>
+              </select></p>
+          </div>
+
+          <div style="margin-top: 46px;" class="flex-box flex-j-e" @click="saveMsg">
+            <div class="submit-box flex-box flex-j-c flex-a-c">
+              <img src="../../assets/images/save.png" alt="">
+              <div>儲存資料</div>
             </div>
           </div>
-          <div class="content3">
-            <div class="content3-person">
-              <div class="content3-person-item flex-box flex-j-t flex-a-c">
-                <img src="" alt="">
-                <div>
-                  <p>User:</p>
-                  <p>ID70624700</p>
-                </div>
-              </div>
+        </div>
 
+        <div class="hasMsg" v-if="hasMsg == 1">
+          <div class="input-list">
+            <p>用戶名稱</p>
+            <p>Username2047</p>
+          </div>
+
+          <div class="input-list flex-box flex-j-s flex-a-c">
+            <div>
+              <p>姓氏</p>
+              <p>Chung</p>
             </div>
-            <div class="content3-item">
-              <p>個人資料</p>
-              <div>
-                <div class="content2">
-                  <div class="content2-item">
-                    <img src="" alt="">
-                  </div>
-                  <div class="content2-item">
-                    <div>User Name</div>
-                  </div>
-                  <div class="content2-item">
-                    <div class="content2-btn-box flex-box flex-j-c flex-a-c">
-                      <img src="../../assets/images/edit.png" alt="">
-                      <span>修改資料</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="content3">
-                  <div class="content3-person">
-                    <img src="" alt="">
-                    <div>
-                      <p>User:</p>
-                      <p>ID70624700</p>
-                    </div>
-                  </div>
-                  <div class="content3-item">
-                    <p>個人資料</p>
+            <div>
+              <p>名稱</p>
+              <p>Ka Wai</p>
+            </div>
+          </div>
 
-                    <div class="input-list">
-                      <p>用戶名稱</p>
-                      <p><input type="text"></p>
-                    </div>
+          <div class="input-list">
+            <p>電郵地址</p>
+            <p>Chungkawai2047@gmail.com</p>
+          </div>
 
-                    <div class="input-list flex-box flex-j-s flex-a-c">
-                      <div>
-                        <p>姓氏</p>
-                        <p><input type="text"></p>
-                      </div>
-                      <div>
-                        <p>名稱</p>
-                        <p><input type="text"></p>
-                      </div>
-                    </div>
+          <div class="input-list">
+            <p>性別</p>
+            <p>女</p>
+          </div>
 
-                    <div class="input-list">
-                      <p>電郵地址</p>
-                      <p><input type="text"></p>
-                    </div>
+        </div>
 
-                    <div class="input-list">
-                      <p>性別</p>
-                      <p><input type="text"></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
   import mNav from '@/components/nav.vue'
   export default {
     name: 'app',
+    data(){
+      return{
+        hasMsg: 0
+      }
+    },
     components: {
       mNav
+    },
+    methods:{
+      editMsg(){
+        this.hasMsg = 0
+      },
+      saveMsg(){
+        this.hasMsg = 1
+      }
     }
   }
 </script>
@@ -114,18 +130,19 @@
 <style lang="scss" scoped>
   @import '../../assets/scss/flex.css';
 
-  .box {
-    background: #fff;
-    width: 100vw;
-    height: 100vh;
-  }
+  @media (min-width: 770px) {
+    .box {
+      border-top: 10px solid #383838;
+    }
 
-  .main {
-    background: #fff;
+    .main {
+      padding-top: 38px;
 
-    .content {
+      .content {
+        width: 547px;
+        height: 332px;
+        position: relative;
 
-      @media (min-width: 770px) {
         .content2 {
           text-align: center;
           width: 216px;
@@ -207,27 +224,6 @@
               font-family: LiGothicMed;
               color: rgba(58, 57, 58, 1);
               opacity: 1;
-              border-radius: 21px;
-              position: absolute;
-              left: -2px;
-              top: -2px;
-              z-index: 3;
-              background: #fff;
-
-              .content1-item {
-                font-size: 8px;
-                font-family: PingFang TC;
-                font-weight: 500;
-                margin-top: 20px;
-
-                img {
-                  width: 12px;
-                  height: 12px;
-                  display: inline-block;
-                  vertical-align: middle;
-                }
-              }
-
               margin-bottom: 18px;
             }
 
@@ -235,300 +231,252 @@
               width: 100%;
               margin-top: 6px;
 
-              .content2-btn-box {
-                width: 85px;
-                height: 19px;
-                margin: 0 auto;
-                text-align: center;
-                background: rgba(28, 29, 29, 1);
-                opacity: 1;
-                border-radius: 14px;
-                font-size: 9px;
+              p {
+                margin-bottom: 0;
+                font-size: 8px;
                 font-family: PingFang TC;
-                font-weight: 500;
-                color: rgba(255, 255, 255, 1);
+                font-weight: 400;
+                color: rgba(49, 49, 49, 1);
+                opacity: 0.62;
 
-                p {
-                  margin-bottom: 0;
-                  font-size: 8px;
-                  font-family: PingFang TC;
-                  font-weight: 400;
-                  color: rgba(49, 49, 49, 1);
-                  opacity: 0.62;
-
-                  input {
-                    width: 100%;
-                    border: none;
-                    border-bottom: 1px solid rgba(137, 137, 137, 1);
-                  }
+                input {
+                  width: 100%;
+                  border: none;
+                  border-bottom: 1px solid rgba(137, 137, 137, 1);
                 }
-
               }
 
-              .content3 {
-                float: right;
-                padding-right: 34px;
-
-                .content3-person {
-                  display: none;
-                }
-
-                .content3-item {
-                  width: 200px;
-                  margin-top: 58px;
-
-                  p {
-                    height: 22px;
-                    font-size: 19px;
-                    font-family: LiGothicMed;
-                    color: rgba(58, 57, 58, 1);
-                    opacity: 1;
-                    margin-bottom: 18px;
-                  }
-
-                  .input-list {
-                    width: 100%;
-                    margin-top: 6px;
-
-                    p {
-                      margin-bottom: 0;
-                      font-size: 8px;
-                      font-family: PingFang TC;
-                      font-weight: 400;
-                      color: rgba(49, 49, 49, 1);
-                      opacity: 0.62;
-
-                      input {
-                        width: 100%;
-                        border: none;
-                        border-bottom: 1px solid rgba(137, 137, 137, 1);
-                      }
-                    }
-
-                    div {
-                      width: 48%;
-                    }
-                  }
-
-                  div {
-                    width: 48%;
-                  }
-                }
+              div {
+                width: 48%;
               }
             }
-          }
 
-          @media (max-width: 768px) {
-            .content2 {
+            .submit-box {
               display: none;
             }
+          }
+        }
+      }
+    }
+  }
 
-            .main {
-              .content {
-                width: 100vw;
-                height: 100vh;
-                position: relative;
+  @media (max-width: 768px) {
+    .box {
+      padding-top: 0;
+    }
 
-                .content1 {
-                  position: relative;
-                  height: 144px;
-                  width: 100%;
+    .main {
+      .content {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
 
-                  .content1-item {
-                    position: absolute;
-                    box-sizing: border-box;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+        .content2 {
+          display: none;
+        }
 
-                    img {
-                      width: 30px;
-                      height: 30px;
-                      display: block;
-                      margin-right: 10px;
-                    }
+        .content3 {
+          margin: 30px;
+          position: relative;
 
-                    font-size:28px;
-                    font-family:PingFang TC;
-                    font-weight:500;
-                    color:rgba(155, 155, 155, 1);
-                    letter-spacing:6px;
-                    width: 100%;
-                    height: 144px;
-                    text-align: center;
+          .content3-person {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            height: 200px;
+            background: rgba(255, 255, 255, 1);
+            border: 4px solid rgba(232, 232, 232, 1);
+            box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+            opacity: 1;
+            border-radius: 44px;
 
-                    margin-top: 0;
+            .content3-person-item {
+              margin-top: 32px;
+              margin-left: 54px;
 
-                    &:nth-child(1) {
-                      width: 283px;
-                      top: 0;
-                      left: 0;
-                      box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-                      opacity: 1;
-                      border-radius: 0 0 44px 0;
-                      background: #fff;
-                      z-index: 3;
-                      margin-top: 0;
-                    }
+              img {
+                width: 130px;
+                height: 132px;
+                display: block;
+                background: rgba(0, 0, 0, 1);
+                border-radius: 50%;
+                margin-right: 38px;
+              }
 
-                    &:nth-child(2) {
-                      width: 503px;
-                      padding-left: 283px;
-                      box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-                      opacity: 1;
-                      border-radius: 0 0 44px 0;
-                      background-color: #fff;
-                      z-index: 1;
-                    }
+              font-size:28px;
+              font-family:PingFang HK;
+              font-weight:500;
+              color:rgba(116, 116, 116, 1);
+              opacity:1;
 
-                    &:nth-child(3) {
-                      padding-left: 503px;
-                      border: 2px solid rgba(216, 216, 216, 1);
-                      box-shadow: 14px 6px 28px rgba(0, 0, 0, 0.16);
+              .edit-btn{
+                margin-left: 17px;
+                width:239px;
+                height:70px;
+                background:rgba(28,29,29,1);
+                opacity:1;
+                border-radius:28px;
+                font-size:26px;
+                font-family:PingFang TC;
+                font-weight:500;
+                color:rgba(255,255,255,1);
+                img{
+                  width: 24px;
+                  height: 24px;
+                  display: block;
+                  margin-right: 18px;
+                }
+              }
+            }
+
+
+          }
+
+          .content3-item {
+            padding: 252px 50px 50px;
+            background: rgba(255, 255, 255, 1);
+            border: 4px solid rgba(232, 232, 232, 1);
+            box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+            opacity: 1;
+            border-radius: 44px;
+            font-size: 32px;
+
+            p {
+              font-size: 60px;
+              font-family: LiGothicMed;
+              color: #3A393A;
+              margin-bottom: 55px;
+            }
+            .noMsg{
+              .input-list {
+                margin-top: 42px;
+
+                &:first-child {
+                  margin-top: 0;
+                }
+
+                p {
+                  box-sizing: border-box;
+                  font-size: 32px;
+                  font-family: PingFang TC;
+                  font-weight: 400;
+                  color: rgba(87, 87, 87, 1);
+                  margin: 0;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                    margin-top: 28px;
+                    height: 87px;
+
+                    input {
+                      width: 100%;
+                      height: 100%;
+                      border: 4px solid rgba(137, 137, 137, 0.25);
+                      border-radius: 10px;
+                      padding: 0 10px;
+                      font-size:36px;
+                      font-family:PingFang TC;
+                      font-weight:400;
+                      color:rgba(49,49,49,1);
+                      opacity:0.49;
+                      box-sizing: border-box;
                     }
                   }
 
-                  .content3 {
-                    margin: 30px;
-                    position: relative;
+                }
 
-                    .content3-person {
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      display: block;
-                      width: 100%;
-                      height: 200px;
-                      background: rgba(255, 255, 255, 1);
-                      border: 4px solid rgba(232, 232, 232, 1);
-                      box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-                      opacity: 1;
-                      border-radius: 44px;
-
-                      img {
-                        width: 130px;
-                        height: 132px;
-                        display: block;
-                        float: left;
-                        margin: 0 auto;
-                      }
-
-                      div {
-                        float: left;
-                        margin: 0 auto;
-                      }
+                &:nth-child(2) {
+                  div {
+                    width: 68%;
+                    &:first-child {
+                      width: 30%;
                     }
+                  }
+                }
+                #sex {
+                  width: 117px;
+                  height: 87px;
+                  background: rgba(255, 255, 255, 1);
+                  border: 4px solid rgba(137, 137, 137, 1);
+                  opacity: 0.25;
+                  border-radius: 10px;
+                  text-align: center;
+                }
 
-                    .content3 {
-                      margin: 30px;
-                      position: relative;
+              }
 
-                      .content3-person {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        display: block;
-                        box-sizing: border-box;
-                        width: 100%;
-                        height: 200px;
-                        background: rgba(255, 255, 255, 1);
-                        border: 4px solid rgba(232, 232, 232, 1);
-                        box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-                        opacity: 1;
-                        border-radius: 44px;
+              .submit-box {
+                width: 239px;
+                height: 70px;
+                background: rgba(90, 119, 134, 1);
+                opacity: 1;
+                border-radius: 28px;
+                font-size: 26px;
+                font-family: PingFang TC;
+                font-weight: 500;
+                line-height: 53px;
+                color: rgba(255, 255, 255, 1);
 
-                        .content3-person-item {
-                          margin-top: 32px;
-                          margin-left: 54px;
+                img {
+                  width: 28px;
+                  height: 28px;
+                  margin-right: 16px;
+                  display: block;
+                }
+              }
+            }
 
-                          img {
-                            width: 130px;
-                            height: 132px;
-                            display: block;
-                            background: rgba(0, 0, 0, 1);
-                            border-radius: 50%;
-                            margin-right: 39px;
-                          }
+            .hasMsg{
+              .input-list {
+                margin-top: 30px;
 
-                        }
-                      }
+                &:first-child {
+                  margin-top: 0;
+                }
+
+                &:last-child{
+                  p{
+                    &:last-child{
+                      border-bottom: none;
+                    }
+                  }
+                }
+                &:nth-child(2){
+                  div{
+                    width: 50%;
+                  }
+                }
+
+                p {
+                  box-sizing: border-box;
+                  font-size: 32px;
+                  font-family: PingFang TC;
+                  font-weight: 400;
+                  color: rgba(87, 87, 87, 1);
+                  margin: 0;
+
+                  &:last-child {
+                    margin-bottom: 0;
+                    margin-top: 28px;
+                    height: 87px;
+                    border-bottom: 4px solid rgba(137, 137, 137, 0.25);
+                    line-height: 87px;
+                  }
+
+                }
+
+              }
 
 
+            }
 
-                      .content3-item {
-                        padding: 252px 53px 50px 43px;
-                        background: rgba(255, 255, 255, 1);
-                        border: 4px solid rgba(232, 232, 232, 1);
-                        box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-                        opacity: 1;
-                        border-radius: 44px;
-                        font-size: 32px;
+          }
 
-                        p {
-                          font-size: 60px;
-                          font-family: LiGothicMed;
-                          color: #3A393A;
-                          margin-bottom: 53px;
-                        }
-
-                        .input-list {
-
-                          p {
-                            font-size: 32px;
-                            font-family: PingFang TC;
-                            font-weight: 400;
-                            color: rgba(87, 87, 87, 1);
-                            opacity: 0.62;
-                            margin-bottom: 20px;
-
-                            &:last-child {
-                              height: 87px;
-
-                              input {
-                                width: 100%;
-                                height: 100%;
-                                border: 4px solid rgba(137, 137, 137, 1);
-                                border-radius: 10px;
-                              }
-                            }
-
-                            &:nth-child(2) {
-                              div {
-                                width: 50%;
-
-                                &:first-child {
-                                  width: 46%;
-                                }
-                              }
-                            }
-
-                          }
-
-                          .content3-item {
-                            padding: 252px 50px 50px;
-                            background: rgba(255, 255, 255, 1);
-                            border: 4px solid rgba(232, 232, 232, 1);
-                            box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-                            opacity: 1;
-                            border-radius: 44px;
-                            font-size: 32px;
-
-                            .input-list {
-                              p {
-                                box-sizing: border-box;
-                                padding: 10px;
-
-                                &:last-child {
-                                  height: 80px;
-                                }
-
-                                input {
-                                  height: 100%;
-                                }
-                              }
-
-                            }
-                          }
-                        }
-                      }
+        }
+      }
+    }
+  }
 </style>

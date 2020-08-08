@@ -127,9 +127,9 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../../../static/css/flex.css';
+  @import '../../assets/scss/flex.css';
   @import '../../assets/scss/login.scss';
-  
+
   @media (max-width: 768px) {
     .content3 {
       margin: 30px;
@@ -140,7 +140,7 @@
       }
     }
   }
-    
+
   @media (min-width: 769px) {
     .content3 {
       padding-left: 97px;
@@ -257,7 +257,7 @@
         .info {
           border: 2px dashed #D8D8D8;
           border-top: none;
-          border-radius:0 0 11px 11px; 
+          border-radius:0 0 11px 11px;
         }
       }
       .btn-box {
