@@ -16,44 +16,54 @@
           <div class="title">
             <div class="left">
               <img src="../../assets/images/address.png" />
-              默認收貨地址
+              <span>默認收貨地址</span>
             </div>
             <div class="right">
               <div class="right-item">
                 <img src="../../assets/images/edit.png" />
-                編輯資料
+                <span>編輯資料</span>
               </div>
               <div class="right-item">
                 <img src="../../assets/images/delete.png" />
-                刪除
+                <span>刪除</span>
               </div>
             </div>
           </div>
           <div class="info">
             <p class="info-item">
-              <label>收件人姓氏：</label>
+              <span class="dot"></span>
+              <label>收件人姓氏:</label>
               <span>LAU</span>
-              <label>收件人名稱：</label>
+              <span class="dot"></span>
+              <label>收件人名稱:</label>
               <span>WAI KIN</span>
             </p>
             <p class="info-item">
-              <label>聯絡電郵：</label>
+              <span class="dot"></span>
+              <label>聯絡電郵:</label>
               <span>lauwaikin195@gmail.cpm</span>
             </p>
             <p class="info-item">
-              <label>聯絡電話：</label>
+              <span class="dot"></span>
+              <label>聯絡電話:</label>
               <span>94204422</span>
             </p>
             <p class="info-item">
-              <label>區域：</label>
+              <span class="dot"></span>
+              <label>區域:</label>
               <span>香港島</span>
-              <label>地區：</label>
+              <span class="dot"></span>
+              <label>地區:</label>
               <span>東區</span>
-              <label>分區：</label>
+              <span class="dot"></span>
+              <label>分區:</label>
               <span>小西灣</span>
             </p>
-            <p class="info-item">
-              <label>送貨地址：</label>
+            <p class="info-item flex-a-s flex-box">
+              <span class="flex-box flex-j-t flex-a-c">
+                <span class="dot"></span>
+                <label>送貨地址:</label>
+              </span>
               <span>香港小西灣村唔知乜嘢樓15樓1501室</span>
             </p>
           </div>
@@ -157,11 +167,10 @@
         box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
         opacity: 1;
         border-radius: 44px;
-
+        z-index: 100;
         .content3-person-item {
           margin-top: 32px;
           margin-left: 54px;
-
           img {
             width: 130px;
             height: 132px;
@@ -185,11 +194,74 @@
         opacity: 1;
         border-radius: 44px;
         font-size: 32px;
+        padding: 198px 0px 0px !important;
         .oldAddress {
-          padding: 252px 0px 0px !important;
+          margin: -30px 0 40px;
+          .title {
+            height: 148px;
+            box-shadow: 0px 1px 2px rgba(0,0,0,0.16);
+            border-radius:0px 0px 30px 30px;
+            line-height: 178px;
+          }
+          .left {
+            font-size: 28px;
+            height: 120%;
+            img {
+              margin: 0 16px 0 50px;
+              width: 40px;
+            }
+          }
+          .right {
+            font-size: 8px;
+            height: 120%;
+            .right-item {
+              margin-right: 20px;
+              img {
+                width: 30px;
+                margin-right: 2px;
+              }
+              span {
+                display: none;
+              }
+            }
+          }
+          .dot {
+            display: inline-block;
+          }
+          .info {
+            padding: 34px 14px 30px 24px;
+            box-shadow:0px 14px 12px rgba(0,0,0,0.16);
+            border-radius:0px 0px 30px 30px;
+            border: 4px dashed #D8D8D8;
+            .info-item {
+              color: #747474;
+              line-height: 40px;
+              margin-bottom: 24px;
+              opacity:0.62;
+              display: inline-flex;
+              align-items: center;
+              label {
+                font-weight: 400;
+                font-size: 28px;
+                margin-right: 13px;
+                white-space: nowrap;
+              }
+              span {
+                font-weight: 600;
+                font-size: 30px;
+                margin-right: 13px;
+              }
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          .btn-box {
+            display: none;
+          }
         }
         .newAddress {
-          padding: 252px 50px 50px !important;
+          padding: 0 50px;
           .title {
             font-size: 60px;
             font-family: LiGothicMed;
@@ -242,6 +314,7 @@
           }
         }
         .btn-box {
+          margin: 54px 0 110px; 
           button {
             padding: 0 54px;
             height: 67px;
@@ -275,6 +348,7 @@
           }
           .left {
             font-size: 8px;
+            height: 100%;
             img {
               margin: 0 6px 0 17px;
               width: 8px;
@@ -290,8 +364,13 @@
               }
             }
           }
+          .dot {
+            display: none;
+          }
           .info {
             padding: 12.4px 12.4px 7px 12.4px;
+            border: 2px dashed #D8D8D8;
+            border-radius:0 0 11px 11px; 
             .info-item {
               font-size: 8px;
               color: #747474;
@@ -365,7 +444,6 @@
           width: 100%;
           color: #fff;
           .left {
-            height: 100%;
             display: inline-flex;
             align-items: center;
             img {
@@ -374,7 +452,6 @@
           }
           .right {
             float: right;
-            height: 100%;
             .right-item {
               height: 100%;
               display: inline-flex;
@@ -386,9 +463,13 @@
           }
         }
         .info {
-          border: 2px dashed #D8D8D8;
           border-top: none;
-          border-radius:0 0 11px 11px; 
+        }
+        .dot {
+          width:14px;
+          height:14px;
+          background:rgba(177,177,177,1);
+          border-radius:50%;
         }
       }
       .btn-box {
