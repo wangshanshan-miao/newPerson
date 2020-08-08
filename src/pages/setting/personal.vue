@@ -45,38 +45,60 @@
             </div>
             <div class="content3-item">
               <p>個人資料</p>
-
-              <div class="input-list">
-                <p>用戶名稱</p>
-                <p><input type="text"></p>
-              </div>
-
-              <div class="input-list flex-box flex-j-s flex-a-c">
-                <div>
-                  <p>姓氏</p>
-                  <p><input type="text"></p>
+              <div>
+                <div class="content2">
+                  <div class="content2-item">
+                    <img src="" alt="">
+                  </div>
+                  <div class="content2-item">
+                    <div>User Name</div>
+                  </div>
+                  <div class="content2-item">
+                    <div class="content2-btn-box flex-box flex-j-c flex-a-c">
+                      <img src="../../assets/images/edit.png" alt="">
+                      <span>修改資料</span>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p>名稱</p>
-                  <p><input type="text"></p>
+                <div class="content3">
+                  <div class="content3-person">
+                    <img src="" alt="">
+                    <div>
+                      <p>User:</p>
+                      <p>ID70624700</p>
+                    </div>
+                  </div>
+                  <div class="content3-item">
+                    <p>個人資料</p>
+
+                    <div class="input-list">
+                      <p>用戶名稱</p>
+                      <p><input type="text"></p>
+                    </div>
+
+                    <div class="input-list flex-box flex-j-s flex-a-c">
+                      <div>
+                        <p>姓氏</p>
+                        <p><input type="text"></p>
+                      </div>
+                      <div>
+                        <p>名稱</p>
+                        <p><input type="text"></p>
+                      </div>
+                    </div>
+
+                    <div class="input-list">
+                      <p>電郵地址</p>
+                      <p><input type="text"></p>
+                    </div>
+
+                    <div class="input-list">
+                      <p>性別</p>
+                      <p><input type="text"></p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="input-list">
-                <p>電郵地址</p>
-                <p><input type="text"></p>
-              </div>
-
-              <div class="input-list">
-                <p>性別</p>
-                <p><input type="text"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -102,79 +124,8 @@
     background: #fff;
 
     .content {
-      background: rgba(255, 255, 255, 1);
-      border: 2px solid rgba(224, 224, 224, 1);
-      box-shadow: 7px 7px 6px rgba(0, 0, 0, 0.16);
-      opacity: 1;
-      border-radius: 22px;
 
-      .content1 {
-        .content1-item {
-          img {
-            width: 28px;
-            height: 28px;
-            display: inline-block;
-            vertical-align: middle;
-          }
-
-          font-size:20px;
-          font-family:PingFang TC;
-          font-weight:500;
-          color:rgba(155, 155, 155, 1);
-          text-align: center;
-
-          &:nth-child(1) {
-            color: rgba(29, 82, 116, 1);
-          }
-        }
-      }
-
-
-    }
-  }
-
-  @media (min-width: 770px) {
-    .box {
-      border-top: 10px solid #383838;
-    }
-
-    .main {
-      padding-top: 38px;
-
-      .content {
-        width: 547px;
-        height: 332px;
-        position: relative;
-
-        .content1 {
-          width: 110px;
-          height: 100%;
-          background: rgba(255, 255, 255, 1);
-          border: 1px solid rgba(216, 216, 216, 1);
-          box-shadow: 7px 3px 14px rgba(0, 0, 0, 0.16);
-          opacity: 1;
-          border-radius: 21px;
-          position: absolute;
-          left: -2px;
-          top: -2px;
-          z-index: 3;
-          background: #fff;
-
-          .content1-item {
-            font-size: 8px;
-            font-family: PingFang TC;
-            font-weight: 500;
-            margin-top: 20px;
-
-            img {
-              width: 12px;
-              height: 12px;
-              display: inline-block;
-              vertical-align: middle;
-            }
-          }
-        }
-
+      @media (min-width: 770px) {
         .content2 {
           text-align: center;
           width: 216px;
@@ -256,6 +207,27 @@
               font-family: LiGothicMed;
               color: rgba(58, 57, 58, 1);
               opacity: 1;
+              border-radius: 21px;
+              position: absolute;
+              left: -2px;
+              top: -2px;
+              z-index: 3;
+              background: #fff;
+
+              .content1-item {
+                font-size: 8px;
+                font-family: PingFang TC;
+                font-weight: 500;
+                margin-top: 20px;
+
+                img {
+                  width: 12px;
+                  height: 12px;
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+              }
+
               margin-bottom: 18px;
             }
 
@@ -263,197 +235,300 @@
               width: 100%;
               margin-top: 6px;
 
-              p {
-                margin-bottom: 0;
-                font-size: 8px;
+              .content2-btn-box {
+                width: 85px;
+                height: 19px;
+                margin: 0 auto;
+                text-align: center;
+                background: rgba(28, 29, 29, 1);
+                opacity: 1;
+                border-radius: 14px;
+                font-size: 9px;
                 font-family: PingFang TC;
-                font-weight: 400;
-                color: rgba(49, 49, 49, 1);
-                opacity: 0.62;
+                font-weight: 500;
+                color: rgba(255, 255, 255, 1);
 
-                input {
-                  width: 100%;
-                  border: none;
-                  border-bottom: 1px solid rgba(137, 137, 137, 1);
-                }
-              }
-
-              div {
-                width: 48%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .box {
-      padding-top: 0;
-    }
-
-    .main {
-      .content {
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-
-        .content1 {
-          position: relative;
-          height: 144px;
-          width: 100%;
-
-          .content1-item {
-            position: absolute;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            img {
-              width: 30px;
-              height: 30px;
-              display: block;
-              margin-right: 10px;
-            }
-
-            font-size:28px;
-            font-family:PingFang TC;
-            font-weight:500;
-            color:rgba(155, 155, 155, 1);
-            letter-spacing:6px;
-            width: 100%;
-            height: 144px;
-            text-align: center;
-
-            margin-top: 0;
-
-            &:nth-child(1) {
-              width: 283px;
-              top: 0;
-              left: 0;
-              box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-              opacity: 1;
-              border-radius: 0 0 44px 0;
-              background: #fff;
-              z-index: 3;
-              margin-top: 0;
-            }
-
-            &:nth-child(2) {
-              width: 503px;
-              padding-left: 283px;
-              box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-              opacity: 1;
-              border-radius: 0 0 44px 0;
-              background-color: #fff;
-              z-index: 1;
-            }
-
-            &:nth-child(3) {
-              padding-left: 503px;
-              border: 2px solid rgba(216, 216, 216, 1);
-              box-shadow: 14px 6px 28px rgba(0, 0, 0, 0.16);
-            }
-          }
-
-
-        }
-
-        .content2 {
-          display: none;
-        }
-
-        .content3 {
-          margin: 30px;
-          position: relative;
-
-          .content3-person {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            box-sizing: border-box;
-            width: 100%;
-            height: 200px;
-            background: rgba(255, 255, 255, 1);
-            border: 4px solid rgba(232, 232, 232, 1);
-            box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-            opacity: 1;
-            border-radius: 44px;
-
-            .content3-person-item {
-              margin-top: 32px;
-              margin-left: 54px;
-
-              img {
-                width: 130px;
-                height: 132px;
-                display: block;
-                background: rgba(0, 0, 0, 1);
-                border-radius: 50%;
-                margin-right: 39px;
-              }
-
-            }
-          }
-
-
-
-          .content3-item {
-            padding: 252px 53px 50px 43px;
-            background: rgba(255, 255, 255, 1);
-            border: 4px solid rgba(232, 232, 232, 1);
-            box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
-            opacity: 1;
-            border-radius: 44px;
-            font-size: 32px;
-
-            p {
-              font-size: 60px;
-              font-family: LiGothicMed;
-              color: #3A393A;
-              margin-bottom: 53px;
-            }
-
-            .input-list {
-
-              p {
-                font-size: 32px;
-                font-family: PingFang TC;
-                font-weight: 400;
-                color: rgba(87, 87, 87, 1);
-                opacity: 0.62;
-                margin-bottom: 20px;
-
-                &:last-child {
-                  height: 87px;
+                p {
+                  margin-bottom: 0;
+                  font-size: 8px;
+                  font-family: PingFang TC;
+                  font-weight: 400;
+                  color: rgba(49, 49, 49, 1);
+                  opacity: 0.62;
 
                   input {
                     width: 100%;
-                    height: 100%;
-                    border: 4px solid rgba(137, 137, 137, 1);
-                    border-radius: 10px;
-                  }
-                }
-
-                &:nth-child(2) {
-                  div {
-                    width: 50%;
-
-                    &:first-child {
-                      width: 46%;
-                    }
+                    border: none;
+                    border-bottom: 1px solid rgba(137, 137, 137, 1);
                   }
                 }
 
               }
+
+              .content3 {
+                float: right;
+                padding-right: 34px;
+
+                .content3-person {
+                  display: none;
+                }
+
+                .content3-item {
+                  width: 200px;
+                  margin-top: 58px;
+
+                  p {
+                    height: 22px;
+                    font-size: 19px;
+                    font-family: LiGothicMed;
+                    color: rgba(58, 57, 58, 1);
+                    opacity: 1;
+                    margin-bottom: 18px;
+                  }
+
+                  .input-list {
+                    width: 100%;
+                    margin-top: 6px;
+
+                    p {
+                      margin-bottom: 0;
+                      font-size: 8px;
+                      font-family: PingFang TC;
+                      font-weight: 400;
+                      color: rgba(49, 49, 49, 1);
+                      opacity: 0.62;
+
+                      input {
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid rgba(137, 137, 137, 1);
+                      }
+                    }
+
+                    div {
+                      width: 48%;
+                    }
+                  }
+
+                  div {
+                    width: 48%;
+                  }
+                }
+              }
             }
           }
 
-        }
-      }
-    }
-  }
+          @media (max-width: 768px) {
+            .content2 {
+              display: none;
+            }
+
+            .main {
+              .content {
+                width: 100vw;
+                height: 100vh;
+                position: relative;
+
+                .content1 {
+                  position: relative;
+                  height: 144px;
+                  width: 100%;
+
+                  .content1-item {
+                    position: absolute;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                      width: 30px;
+                      height: 30px;
+                      display: block;
+                      margin-right: 10px;
+                    }
+
+                    font-size:28px;
+                    font-family:PingFang TC;
+                    font-weight:500;
+                    color:rgba(155, 155, 155, 1);
+                    letter-spacing:6px;
+                    width: 100%;
+                    height: 144px;
+                    text-align: center;
+
+                    margin-top: 0;
+
+                    &:nth-child(1) {
+                      width: 283px;
+                      top: 0;
+                      left: 0;
+                      box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+                      opacity: 1;
+                      border-radius: 0 0 44px 0;
+                      background: #fff;
+                      z-index: 3;
+                      margin-top: 0;
+                    }
+
+                    &:nth-child(2) {
+                      width: 503px;
+                      padding-left: 283px;
+                      box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+                      opacity: 1;
+                      border-radius: 0 0 44px 0;
+                      background-color: #fff;
+                      z-index: 1;
+                    }
+
+                    &:nth-child(3) {
+                      padding-left: 503px;
+                      border: 2px solid rgba(216, 216, 216, 1);
+                      box-shadow: 14px 6px 28px rgba(0, 0, 0, 0.16);
+                    }
+                  }
+
+                  .content3 {
+                    margin: 30px;
+                    position: relative;
+
+                    .content3-person {
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      display: block;
+                      width: 100%;
+                      height: 200px;
+                      background: rgba(255, 255, 255, 1);
+                      border: 4px solid rgba(232, 232, 232, 1);
+                      box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+                      opacity: 1;
+                      border-radius: 44px;
+
+                      img {
+                        width: 130px;
+                        height: 132px;
+                        display: block;
+                        float: left;
+                        margin: 0 auto;
+                      }
+
+                      div {
+                        float: left;
+                        margin: 0 auto;
+                      }
+                    }
+
+                    .content3 {
+                      margin: 30px;
+                      position: relative;
+
+                      .content3-person {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 200px;
+                        background: rgba(255, 255, 255, 1);
+                        border: 4px solid rgba(232, 232, 232, 1);
+                        box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+                        opacity: 1;
+                        border-radius: 44px;
+
+                        .content3-person-item {
+                          margin-top: 32px;
+                          margin-left: 54px;
+
+                          img {
+                            width: 130px;
+                            height: 132px;
+                            display: block;
+                            background: rgba(0, 0, 0, 1);
+                            border-radius: 50%;
+                            margin-right: 39px;
+                          }
+
+                        }
+                      }
+
+
+
+                      .content3-item {
+                        padding: 252px 53px 50px 43px;
+                        background: rgba(255, 255, 255, 1);
+                        border: 4px solid rgba(232, 232, 232, 1);
+                        box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+                        opacity: 1;
+                        border-radius: 44px;
+                        font-size: 32px;
+
+                        p {
+                          font-size: 60px;
+                          font-family: LiGothicMed;
+                          color: #3A393A;
+                          margin-bottom: 53px;
+                        }
+
+                        .input-list {
+
+                          p {
+                            font-size: 32px;
+                            font-family: PingFang TC;
+                            font-weight: 400;
+                            color: rgba(87, 87, 87, 1);
+                            opacity: 0.62;
+                            margin-bottom: 20px;
+
+                            &:last-child {
+                              height: 87px;
+
+                              input {
+                                width: 100%;
+                                height: 100%;
+                                border: 4px solid rgba(137, 137, 137, 1);
+                                border-radius: 10px;
+                              }
+                            }
+
+                            &:nth-child(2) {
+                              div {
+                                width: 50%;
+
+                                &:first-child {
+                                  width: 46%;
+                                }
+                              }
+                            }
+
+                          }
+
+                          .content3-item {
+                            padding: 252px 50px 50px;
+                            background: rgba(255, 255, 255, 1);
+                            border: 4px solid rgba(232, 232, 232, 1);
+                            box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+                            opacity: 1;
+                            border-radius: 44px;
+                            font-size: 32px;
+
+                            .input-list {
+                              p {
+                                box-sizing: border-box;
+                                padding: 10px;
+
+                                &:last-child {
+                                  height: 80px;
+                                }
+
+                                input {
+                                  height: 100%;
+                                }
+                              }
+
+                            }
+                          }
+                        }
+                      }
 </style>

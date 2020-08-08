@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import '../../lib-flexible/flexible'
 import mNav from '@/components/nav.vue'
 import mLogin from './login.vue'
 import mRegister from './register.vue'

@@ -38,6 +38,27 @@
     .login-btn {
         font-size: 44px;
     }
+    .checkbox {
+        margin-top: 34px;
+        height: 60px;
+         label {
+            font-size: 28px;
+            line-height: 60px;
+            padding-left: 60px;
+         }
+        label::before {
+            width: 59px;
+            height: 59px;
+            line-height: 59px;
+            border-radius: 14px;
+        }
+        label::after {
+            width: 59px;
+            height: 59px;
+            line-height: 59px;
+            border-radius: 14px;
+        }
+    }
 }
 @media (min-width: 769px) {
     .row {
@@ -70,6 +91,33 @@
     }
     .login-btn {
         font-size: 12px;
+    }
+    .s-btn {
+        border-radius: 5px;
+        box-shadow:0px 2px 4px rgba(0,0,0,0.16);
+        height: 20px;
+        line-height: 20px;
+        padding: 0 10px;
+        font-size: 7px;
+        margin: 5px 10px 0 0;
+    }
+    .checkbox {
+        margin-top: 8px;
+        height: 18px;
+        label {
+           font-size: 8px;
+           line-height: 17px;
+        }
+       label::before {
+           width: 17px;
+           height: 17px;
+           line-height: 17px;
+       }
+       label::after {
+           width: 17px;
+           height: 17px;
+           line-height: 17px;
+       }
     }
 }
 .row {
@@ -105,4 +153,13 @@
 }
 .login-btn {
     background: #5A7786;
+}
+.s-btn {
+    display: inline-block;
+    background: #5A7786;
+    border: none;
+    color: #fff;
+}
+input::placeholder {
+    padding-left: 5px;
 }
