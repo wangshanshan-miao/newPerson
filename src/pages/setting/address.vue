@@ -1,6 +1,16 @@
 <template>
   <div>
     <div class="content3 flex-box flex-j-c flex-a-c">
+      <div class="content3-person">
+        <div class="content3-person-item flex-box flex-j-t flex-a-c">
+          <img src="" alt="">
+          <div>
+            <p>User:</p>
+            <p>ID70624700</p>
+          </div>
+        </div>
+
+      </div>
       <div class="content3-item" :style="{padding: isOld ?  '10px 0 70px' : '10px 0 30px'}">
         <div class="oldAddress" v-show="isOld">
           <div class="title">
@@ -52,11 +62,11 @@
           </div>
         </div>
         <div class="newAddress">
-          <p class="title" :style="{margin: isOld ?  '0 0 5px' : '20px 0 26px'}">收件人資料</p>
-          <div class="new-box">
-            <div class="address-item">
+          <p class="title" :style="{margin: isOld ?  '0 0 5px' : '20px 0 26px'}">收貨人資料</p>
+          <div class="new-box flex-box flex-j-s flex-a-c">
+            <div class="address-item spe-item">
               <p>收件人姓氏</p>
-              <input type="text" placeholder="Username2047">
+              <input type="text" placeholder="Lau">
             </div>
             <div class="address-item">
               <p>收件人名字</p>
@@ -86,11 +96,11 @@
           <div class="new-box">
             <div class="address-item">
               <p>地址</p>
-              <input type="text" placeholder="自行輸入詳細地址">
+              <textarea type="text" placeholder="自行輸入詳細地址"></textarea>
             </div>
             <div class="address-item">
               <p>備注</p>
-              <input type="text" placeholder="輸入備注內容">
+              <textarea type="text" placeholder="輸入備注內容"></textarea>
             </div>
           </div>
           <p class="checkbox checkbox-primary">
@@ -115,7 +125,7 @@
     name: 'app',
     data () {
       return {
-        isOld: false
+        isOld: true
       }
     },
     mounted () {
@@ -129,21 +139,131 @@
 <style lang="scss" scoped>
   @import '../../assets/scss/flex.css';
   @import '../../assets/scss/login.scss';
-
+  
   @media (max-width: 768px) {
     .content3 {
       margin: 30px;
       position: relative;
+      .content3-person {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 200px;
+        background: rgba(255, 255, 255, 1);
+        border: 4px solid rgba(232, 232, 232, 1);
+        box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+        opacity: 1;
+        border-radius: 44px;
+
+        .content3-person-item {
+          margin-top: 32px;
+          margin-left: 54px;
+
+          img {
+            width: 130px;
+            height: 132px;
+            display: block;
+            background: rgba(0, 0, 0, 1);
+            border-radius: 50%;
+            margin-right: 39px;
+          }
+
+          font-size:28px;
+          font-family:PingFang HK;
+          font-weight:500;
+          color:rgba(116, 116, 116, 1);
+          opacity:1;
+        }
+      }
       .content3-item {
-        width: 200px;
-        margin-top: 63px;
+        background: rgba(255, 255, 255, 1);
+        border: 4px solid rgba(232, 232, 232, 1);
+        box-shadow: 0px 14px 12px rgba(0, 0, 0, 0.16);
+        opacity: 1;
+        border-radius: 44px;
+        font-size: 32px;
+        .oldAddress {
+          padding: 252px 0px 0px !important;
+        }
+        .newAddress {
+          padding: 252px 50px 50px !important;
+          .title {
+            font-size: 60px;
+            font-family: LiGothicMed;
+            color: rgba(58, 57, 58, 1);
+            margin-bottom: 55px;
+          }
+          .new-box {
+            .address-item {
+              width: 100%;
+              margin-top: 42px;
+              p {
+                box-sizing: border-box;
+                font-size: 32px;
+                font-family: PingFang TC;
+                font-weight: 400;
+                color: rgba(87, 87, 87, 1);
+                margin-bottom: 28px;
+                &:last-child {
+                  margin-bottom: 0;
+                  margin-top: 28px;
+                  height: 87px;
+                }
+
+              }
+              input, textarea {
+                width: 98%;
+                height: 87px;
+                border: 4px solid rgba(137, 137, 137, 0.25);
+                border-radius: 10px;
+                padding: 0 0 0 2%;
+                font-size:36px;
+                font-family:PingFang TC;
+                font-weight:400;
+                color:rgba(49,49,49,1);
+                opacity:0.49;
+                box-sizing: border-box;
+                line-height: 87px;
+              }
+              textarea {
+                width: 96%;
+                padding-left: 4%;
+                min-height: 143px;
+                line-height: 67px;
+              }
+            }
+            .spe-item {
+              width: 42%;
+              margin-right: 30px;
+            }
+          }
+        }
+        .btn-box {
+          button {
+            padding: 0 54px;
+            height: 67px;
+            line-height: 67px;
+            border-radius:28px;
+            img {
+              width: 28px;
+              height: 28px;
+              margin-right: 16px;
+            }
+          }
+        }
       }
     }
   }
-
+    
   @media (min-width: 769px) {
     .content3 {
       padding-left: 97px;
+      .content3-person{
+        display: none;
+      }
       .content3-item {
         width: 402px;
         padding: 10px 0 30px;
@@ -152,7 +272,6 @@
             height: 24px;
             box-shadow: 0px 1px 2px rgba(0,0,0,0.16);
             border-radius:11px 11px 0px 0px;
-            color: #fff;
           }
           .left {
             font-size: 8px;
@@ -204,9 +323,20 @@
               width: 48%;
               p {
                 font-size: 8px;
+                margin-bottom: 2px;
               }
-              input {
+              input, textarea {
+                width: 98%;
                 height: 17px;
+                border:1px solid rgba(137,137,137,1);
+                border-radius:2px;
+                font-size: 9px;
+                padding-left: 2%;
+                line-height: 17px;
+              }
+              textarea {
+                width: 96%;
+                padding-left: 4%;
               }
               &:last-child {
                 margin-left: 2%;
@@ -233,6 +363,7 @@
         .title {
           background: #29394B;
           width: 100%;
+          color: #fff;
           .left {
             height: 100%;
             display: inline-flex;
@@ -257,7 +388,7 @@
         .info {
           border: 2px dashed #D8D8D8;
           border-top: none;
-          border-radius:0 0 11px 11px;
+          border-radius:0 0 11px 11px; 
         }
       }
       .btn-box {
@@ -267,8 +398,6 @@
           align-items: center;
           img {
             display: inline-block;
-            width: 7px;
-            margin-right: 5px;
           }
         }
       }
@@ -281,17 +410,10 @@
               display: inline-block;
               p {
                 color: #313131;
-                margin-bottom: 2px;
               }
-              input {
+              input, textarea {
                 display: inline-block;
-                width: 100%;
-                border:1px solid rgba(137,137,137,1);
-                border-radius:2px;
                 opacity:0.25;
-              }
-              input::placeholder {
-                font-size: 9px;
               }
             }
           }
